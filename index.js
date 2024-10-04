@@ -115,6 +115,29 @@ const myLoader5 = ()=>{
         }
     })
 }
-myLoader5()
+
+
+
+
+
+setTimeout(()=>{
+    myLoader5()
 .then(data=>console.log('data pailam',data))
 .catch(err => console.error('data de koi',err))
+},4000)
+
+
+const timeout = setTimeout(() => {
+    console.log(2)
+}, 2000);
+
+
+
+let sum=0;
+const time=setInterval(() => {
+    sum++;
+    console.log(sum)
+    if (sum>6){
+        clearInterval(time)
+    }
+}, 2000);
